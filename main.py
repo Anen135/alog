@@ -2,14 +2,19 @@ from engine import LogicEngine
 
 engine = LogicEngine()
 
+ALOG = "data/MLS.alog"
+ALOQ = "data/MLS.alogq"
+ENTITY = "carl"
+
 # === Загрузка демо-файла ===
 def load_file(path: str):
     with open(path, encoding="utf-8") as f:
         for line in f:
+            print(line, end="")
             engine.parse_line(line)
 
 # Загрузим демо-логику и запросы
-load_file("data/ELD.alog")
+load_file(ALOG)
 
 # Инференция
 engine.infer()
@@ -31,7 +36,7 @@ def advise_management(entity):
 
 # Загрузим и выполним тестовые вопросы
 print("=== ECONOMIC SYSTEM CHECK ===")
-check_compliance("acme_inc")
+check_compliance(ENTITY)
 
 print("\n=== MANAGEMENT ADVICE ===")
-load_file("data/ELD_tests.alogq")
+load_file(ALOQ)

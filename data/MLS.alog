@@ -1,0 +1,34 @@
+# Facts
+anna is human.
+bob is human.
+carla is child.
+
+flu is disease.
+cold is disease.
+
+fever is symptom.
+cough is symptom.
+tiredness is symptom.
+
+paracetamol is medicine.
+rest is treatment.
+
+# Syptoms
+anna has cough.
+anna has fever.
+
+bob has cough.
+
+# Rules
+if ?x has cough and ?x has fever then ?x has flu.
+if ?x has cough and not ?x has fever then ?x has cold.
+
+# URules
+all human are mortal.
+all child are human.
+all human can get disease.
+
+# Suggests 
+if ?x has flu then suggest "take paracetamol".
+if ?x has cold then suggest "rest at home".
+if ?x is child and ?x has flu then suggest "visit doctor".
