@@ -1,0 +1,16 @@
+acme_inc is company.
+acme_inc has asset.
+acme_inc has debt.
+asset has value.
+debt has risk.
+value is high.
+risk is moderate.
+
+if ?x has asset and asset has value and value is high then ?x is profitable.
+if ?x has debt and debt has risk and risk is high then ?x is unstable.
+if ?x is profitable then ?x requires tax_payment.
+
+if ?x is profitable then prefer "invest in growth".
+if ?x is profitable then prefer "increase salaries".
+if ?x is profitable then suggest "issue quarterly report".
+if ?x is unstable then suggest "reduce liabilities".
